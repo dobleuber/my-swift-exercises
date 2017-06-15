@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="DTq-Jn-yJt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="DTq-Jn-yJt">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -23,6 +24,9 @@
                         <subviews>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUn-wB-RiZ">
                                 <rect key="frame" x="87.5" y="230" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="cUn-wB-RiZ" secondAttribute="height" multiplier="2:1" id="aSi-An-cLK"/>
+                                </constraints>
                                 <state key="normal" image="us"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zuU-DF-HnA"/>
@@ -30,6 +34,9 @@
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SgI-JJ-okw">
                                 <rect key="frame" x="87.5" y="360" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="SgI-JJ-okw" secondAttribute="height" multiplier="2:1" id="60H-cj-lsd"/>
+                                </constraints>
                                 <state key="normal" image="us"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fdF-aF-0IG"/>
@@ -37,13 +44,16 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLK-EI-J8d">
                                 <rect key="frame" x="87.5" y="100" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="VLK-EI-J8d" secondAttribute="height" multiplier="2:1" id="5FF-Z3-VWB"/>
+                                </constraints>
                                 <state key="normal" image="us"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Er5-vb-ztx"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Points: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HPy-m1-l7F">
-                                <rect key="frame" x="133.5" y="501" width="108.5" height="20.5"/>
+                                <rect key="frame" x="133" y="72" width="108.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -53,12 +63,15 @@
                         <constraints>
                             <constraint firstItem="cUn-wB-RiZ" firstAttribute="centerX" secondItem="VLK-EI-J8d" secondAttribute="centerX" id="1TP-Sp-Nyd"/>
                             <constraint firstItem="VLK-EI-J8d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="75f-b2-WkX"/>
+                            <constraint firstItem="cUn-wB-RiZ" firstAttribute="height" secondItem="SgI-JJ-okw" secondAttribute="height" id="DmI-Hr-Orx"/>
                             <constraint firstItem="cUn-wB-RiZ" firstAttribute="top" secondItem="VLK-EI-J8d" secondAttribute="bottom" constant="30" id="Ixd-r0-nyw"/>
                             <constraint firstItem="VLK-EI-J8d" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="36" id="KGQ-Ef-PXg"/>
-                            <constraint firstItem="HPy-m1-l7F" firstAttribute="top" secondItem="SgI-JJ-okw" secondAttribute="bottom" constant="41" id="V29-vk-dfj"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" relation="greaterThanOrEqual" secondItem="SgI-JJ-okw" secondAttribute="bottom" constant="20" id="Vnx-6g-tBK"/>
                             <constraint firstItem="SgI-JJ-okw" firstAttribute="top" secondItem="cUn-wB-RiZ" secondAttribute="bottom" constant="30" id="ZUe-2r-lcv"/>
                             <constraint firstItem="SgI-JJ-okw" firstAttribute="centerX" secondItem="cUn-wB-RiZ" secondAttribute="centerX" id="Zjc-5W-5uD"/>
+                            <constraint firstItem="HPy-m1-l7F" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="hA9-xj-yYG"/>
                             <constraint firstItem="HPy-m1-l7F" firstAttribute="centerX" secondItem="SgI-JJ-okw" secondAttribute="centerX" id="hip-Mt-8eJ"/>
+                            <constraint firstItem="cUn-wB-RiZ" firstAttribute="height" secondItem="VLK-EI-J8d" secondAttribute="height" id="xq5-DX-Pim"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kWm-db-r5U"/>
