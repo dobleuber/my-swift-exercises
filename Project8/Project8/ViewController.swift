@@ -66,7 +66,7 @@ class ViewController: UIViewController {
         currentAnswer.text = ""
         
         for btn in activatedButtons {
-            btn.isHidden = false
+            hide(btn, false)
         }
         
         activatedButtons.removeAll()
@@ -75,7 +75,7 @@ class ViewController: UIViewController {
     func letterTapped(btn: UIButton) {
         currentAnswer.text = currentAnswer.text! + btn.titleLabel!.text!
         activatedButtons.append(btn)
-        btn.isHidden = true
+        hide(btn, true)
     }
     
     func loadLevel() {
@@ -125,7 +125,20 @@ class ViewController: UIViewController {
         loadLevel()
         
         for btn in letterButtons {
-            btn.isHidden = false
+            hide(btn, false)
+        }
+    }
+    
+    func hide(_ btn: UIButton, _ hidden: Bool) {
+        btn.isEnabled = false
+        UIView.animate(withDuration: 1, delay: 0, options: [], animations: {
+            if hidden {
+                btn.alpha = 0
+            } else {
+                btn.alpha = 1
+            }
+        }) { (finished: Bool) in
+            btn.isEnabled = true
         }
     }
 }
